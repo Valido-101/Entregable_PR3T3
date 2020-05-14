@@ -7,6 +7,15 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 	private String apellidos;
 	private int edad;
 	
+	public SeleccionFutbol(int id,String nombre,String apellidos,int edad) {
+		
+		this.id=id;
+		this.nombre=nombre;
+		this.apellidos=apellidos;
+		this.edad=edad;
+		
+	}
+	
 	public int getId() {
 		return id;
 	}
