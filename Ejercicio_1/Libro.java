@@ -15,13 +15,31 @@ public class Libro extends Contenido implements Prestable{
 	
 	public void Prestar() {
 		
-		prestado=true;
+		if(prestado==true) {
+			
+			System.out.println("Error. Este libro ya está prestado.");
+			
+		}else {
+			
+			prestado=true;
+			System.out.println("Proceso realizado con éxito.");
+			
+		}
 		
 	}
 	
 	public void Devolver() {
 		
-		prestado=false;
+		if(prestado==false) {
+			
+			System.out.println("Error. Este libro ya está devuelto.");
+			
+		}else {
+			
+			prestado=false;
+			System.out.println("Proceso realizado con éxito.");
+			
+		}
 		
 	}
 	
