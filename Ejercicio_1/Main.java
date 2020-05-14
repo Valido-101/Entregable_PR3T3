@@ -9,18 +9,18 @@ public class Main {
 		
 		Scanner teclado=new Scanner(System.in);
 		Scanner teclado1=new Scanner(System.in);
-		ArrayList<Libro> biblioteca_libros=new ArrayList<Libro>();
-		ArrayList<Revista> biblioteca_revista=new ArrayList<Revista>();
+		ArrayList<Contenido> biblioteca=new ArrayList<Contenido>();
 		int opcion;
 		int codigo;
 		String titulo;
 		int annio;
 		int numero;
+		int indice;
 		
-		biblioteca_libros.add(new Libro(1,"El retorno de Michael Jackson",2019+1));
-		biblioteca_libros.add(new Libro(2,"El Arca Perdida",2009+1));
-		biblioteca_revista.add(new Revista(3,"¡Hola!",2015+1,27));
-		biblioteca_revista.add(new Revista(4,"Qué me dices",2018+1,214));
+		biblioteca.add(new Libro(1,"El retorno de Michael Jackson",2019+1));
+		biblioteca.add(new Libro(2,"El Arca Perdida",2009+1));
+		biblioteca.add(new Revista(3,"¡Hola!",2015+1,27));
+		biblioteca.add(new Revista(4,"Qué me dices",2018+1,214));
 		
 		do {
 			
@@ -36,7 +36,7 @@ public class Main {
 						titulo=teclado1.nextLine();
 						System.out.print("Introduzca el año de publicación > ");
 						annio=teclado.nextInt();
-						biblioteca_libros.add(new Libro(codigo,titulo,annio+1));
+						biblioteca.add(new Libro(codigo,titulo,annio+1));
 						System.out.println("Tarea completada.");
 					break;
 				case 2:
@@ -48,27 +48,34 @@ public class Main {
 						annio=teclado.nextInt();
 						System.out.print("Introduzca el número de la revista > ");
 						numero=teclado.nextInt();
-						biblioteca_revista.add(new Revista(codigo,titulo,annio+1,numero));
+						biblioteca.add(new Revista(codigo,titulo,annio+1,numero));
 						System.out.println("Tarea completada.");
 					break;
 				case 3:
 						System.out.println("\nLibros disponibles:");
-						for(Libro e: biblioteca_libros) {
+						for(Contenido e: biblioteca) {
 							
-							if(e.Prestado()==false) {
+							if(e instanceof Libro) {
 								
-								System.out.println(e.getTitulo());
+								Libro x=(Libro) e;
+								
+								if(x.Prestado()==false) {
+									
+									System.out.println(e.getTitulo());
+									
+								}
 								
 							}
 							
 						}
 						System.out.print("\nIntroduzca el título del libro > ");
 						titulo=teclado1.nextLine();
-						for(Libro e: biblioteca_libros) {
+						for(Contenido e: biblioteca) {
 							
 							if(e.getTitulo().equalsIgnoreCase(titulo)) {
 								
-								e.Prestar();
+								Libro l1=(Libro) e;
+								l1.Prestar();
 								
 							}
 							
@@ -76,38 +83,46 @@ public class Main {
 						break;
 				case 4:
 						System.out.println("\nLibros prestados:");
-						for(Libro e: biblioteca_libros) {
+						for(Contenido e: biblioteca) {
 							
-							if(e.Prestado()==true) {
+							if(e instanceof Libro) {
 								
-								System.out.println(e.getTitulo());
+								Libro x=(Libro) e;
+								
+								if(x.Prestado()==false) {
+									
+									System.out.println(e.getTitulo());
+									
+								}
 								
 							}
 							
 						}
 						System.out.print("\nIntroduzca el título del libro > ");
 						titulo=teclado1.nextLine();
-						for(Libro e: biblioteca_libros) {
+						for(Contenido e: biblioteca) {
 							
 							if(e.getTitulo().equalsIgnoreCase(titulo)) {
 								
-								e.Devolver();
+								Libro l1=(Libro) e;
+								l1.Devolver();
 								
 							}
 							
 						}
 					break;
 				case 5:
-						System.out.println("Libros:");
-						for(Libro e: biblioteca_libros) {
+						for(Contenido e: biblioteca) {
 							
-							System.out.println(e.toString());
-							
-						}
-						System.out.println("\nRevistas:");
-						for(Revista e: biblioteca_revista) {
-							
-							System.out.println(e.toString());
+							if(e instanceof Libro) {
+								
+								((Libro)e).toString();
+								
+							}else {
+								
+								((Revista)e).toString();
+								
+							}
 							
 						}
 						System.out.println();
