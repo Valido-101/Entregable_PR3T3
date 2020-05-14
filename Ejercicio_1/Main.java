@@ -26,6 +26,7 @@ public class Main {
 			
 			System.out.print("Introduzca una opción: \n\t1-Añadir libro\n\t2-Añadir revista\n\t3-Prestar libro\n\t4-Devolver libro\n\t5-Mostrar datos de la biblioteca\n\t6-Salir\n\t>");
 			opcion=teclado.nextInt();
+			System.out.println();
 			
 			switch(opcion) {
 			
@@ -116,11 +117,11 @@ public class Main {
 							
 							if(e instanceof Libro) {
 								
-								((Libro)e).toString();
+								System.out.println(((Libro)e).toString());
 								
 							}else {
 								
-								((Revista)e).toString();
+								System.out.println(((Revista)e).toString());
 								
 							}
 							
