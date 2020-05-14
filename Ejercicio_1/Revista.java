@@ -24,7 +24,7 @@ public class Revista extends Contenido{
 	@Override
 	public String toString() {
 		return "Revista [numero=" + numero + ", Código=" + getCodigo() + ", Título=" + getTitulo()
-		+ ", Año de publicación=" + getAnnio_publicacion() + "]";
+		+ ", Año de publicación=" + getAnnio_publicacion().getYear() + "]";
 	}
 	
 }

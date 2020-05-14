@@ -52,7 +52,7 @@ public class Libro extends Contenido implements Prestable{
 	@Override
 	public String toString() {
 		return "Libro [Prestado=" + prestado + ", Código=" + getCodigo() + ", Título=" + getTitulo()
-				+ ", Año de publicación=" + getAnnio_publicacion() + "]";
+				+ ", Año de publicación=" + getAnnio_publicacion().getYear() + "]";
 	}
 	
 	
