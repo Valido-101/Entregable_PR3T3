@@ -7,7 +7,7 @@ public class Futbolista extends SeleccionFutbol{
 	
 	public void entrevista() {
 		
-		System.out.println("El futbolista "+getNombre());
+		System.out.println("El futbolista "+getNombre()+" "+getApellidos()+" da una entrevista.");
 		
 	}
 
