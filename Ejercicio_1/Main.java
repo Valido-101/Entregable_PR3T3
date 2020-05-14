@@ -32,7 +32,7 @@ public class Main {
 				case 1: 
 						System.out.print("Introduzca el código del libro > ");
 						codigo=teclado.nextInt();
-						System.out.println("Introduzca el título:");
+						System.out.print("Introduzca el título > ");
 						titulo=teclado1.nextLine();
 						System.out.print("Introduzca el año de publicación > ");
 						annio=teclado.nextInt();
@@ -42,7 +42,7 @@ public class Main {
 				case 2:
 						System.out.print("Introduzca el código de la revista > ");
 						codigo=teclado.nextInt();
-						System.out.println("Introduzca el título:");
+						System.out.print("Introduzca el título > ");
 						titulo=teclado1.nextLine();
 						System.out.print("Introduzca el año de publicación > ");
 						annio=teclado.nextInt();
@@ -52,7 +52,17 @@ public class Main {
 						System.out.println("Tarea completada.");
 					break;
 				case 3:
-						System.out.println("Introduzca el título del libro:");
+						System.out.println("\nLibros disponibles:");
+						for(Libro e: biblioteca_libros) {
+							
+							if(e.Prestado()==false) {
+								
+								System.out.println(e.getTitulo());
+								
+							}
+							
+						}
+						System.out.print("\nIntroduzca el título del libro > ");
 						titulo=teclado1.nextLine();
 						for(Libro e: biblioteca_libros) {
 							
@@ -65,7 +75,17 @@ public class Main {
 						}
 						break;
 				case 4:
-						System.out.println("Introduzca el título del libro:");
+						System.out.println("\nLibros prestados:");
+						for(Libro e: biblioteca_libros) {
+							
+							if(e.Prestado()==true) {
+								
+								System.out.println(e.getTitulo());
+								
+							}
+							
+						}
+						System.out.print("\nIntroduzca el título del libro > ");
 						titulo=teclado1.nextLine();
 						for(Libro e: biblioteca_libros) {
 							
