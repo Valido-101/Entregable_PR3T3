@@ -15,7 +15,7 @@ public class Masajista extends SeleccionFutbol{
 	
 	public void darMasajes() {
 		
-		System.out.println("El masajista "+getNombre()+" "+getApellidos()+" dará un masaje.");
+		System.out.println("Dará un masaje.");
 		
 	}
 	

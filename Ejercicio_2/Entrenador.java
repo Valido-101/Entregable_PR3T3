@@ -13,7 +13,13 @@ public class Entrenador extends SeleccionFutbol{
 	
 	public void planificarEntrenamiento() {
 		
-		System.out.println("El entrenador "+getNombre()+" "+getApellidos()+" va a planificar un entrenamiento.");
+		System.out.println("Va a planificar un entrenamiento.");
+		
+	}
+	
+	public void dirigePartido() {
+		
+		System.out.println("Dirige un partido.");
 		
 	}
 	

@@ -40,7 +40,31 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	public void concentrarse() {
+		
+		System.out.println("Concentrarse");
+		
+	}
+	public void viajar() {
+		
+		System.out.println("Viaja");
+		
+	}
+	public void entrenar() {
+		
+		System.out.println("Entrena");
+		
+	}
+	public void jugarPartido() {
+		
+		System.out.println("Juega un partido");
+		
+	}
 	
-	
+	public void asistirPartido() {
+		
+		System.out.println("Asiste al partido");
+		
+	}
 	
 }
