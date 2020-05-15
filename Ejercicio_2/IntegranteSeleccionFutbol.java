@@ -1,7 +1,10 @@
 package Ejercicio_2;
 
+//Interfaz que pide el ejercicio
 public interface IntegranteSeleccionFutbol {
 
+	//Métodos que pasarán a la superclase SeleccionFutbol
+	
 	static void concentrarse() {
 		
 		System.out.println("Concentrarse");

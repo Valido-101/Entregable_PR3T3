@@ -2,11 +2,13 @@ package Ejercicio_2;
 
 public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 
+	//Atributos
 	private int id;
 	private String nombre;
 	private String apellidos;
 	private int edad;
 	
+	//Constructor con parámetros
 	public SeleccionFutbol(int id,String nombre,String apellidos,int edad) {
 		
 		this.id=id;
@@ -15,6 +17,8 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 		this.edad=edad;
 		
 	}
+	
+	//Getters y setters
 	
 	public int getId() {
 		return id;
@@ -40,6 +44,9 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol{
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
+	//Métodos que vienen de la interfaz
+	
 	public void concentrarse() {
 		
 		System.out.println("Concentrarse");

@@ -4,10 +4,12 @@ import java.util.Date;
 
 public abstract class Contenido {
 	
+	//Atributos
 	private int codigo;
 	private String titulo;
 	private Date annio_publicacion;
 	
+	//Constructor
 	public Contenido(int codigo,String titulo,Date annio_publicacion) {
 		
 		this.codigo=codigo;
@@ -15,6 +17,8 @@ public abstract class Contenido {
 		this.annio_publicacion=annio_publicacion;
 		
 	}
+	
+	//Getters y setters
 	
 	public int getCodigo() {
 		return codigo;

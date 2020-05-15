@@ -1,10 +1,13 @@
 package Ejercicio_2;
 
+//Esta clase hereda de SeleccionFutbol
 public class Futbolista extends SeleccionFutbol{
 	
+	//Atributos
 	private int dorsal;
 	private String demarcacion;
 	
+	//Constructor
 	public Futbolista(int id, String nombre, String apellidos, int edad,int dorsal,String demarcacion) {
 		super(id, nombre, apellidos, edad);
 		
@@ -12,6 +15,8 @@ public class Futbolista extends SeleccionFutbol{
 		this.demarcacion=demarcacion;
 		
 	}
+	
+	//Métodos exclusivos de esta clase
 	
 	public void entrevista() {
 		

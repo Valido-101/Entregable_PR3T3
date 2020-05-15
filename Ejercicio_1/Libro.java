@@ -2,16 +2,21 @@ package Ejercicio_1;
 
 import java.util.Date;
 
+//Hereda de Contenido e implementa la interfaz Prestable
 public class Libro extends Contenido implements Prestable{
 	
+	//Atributos
 	private boolean prestado;
 	
+	//Constructor
 	public Libro(int codigo,String titulo,int annio_publicacion) {
 		super(codigo,titulo,new Date(annio_publicacion,0,0));
 		
 		prestado=false;
 		
 	}
+	
+	//Métodos heredados de la interfaz
 	
 	public void Prestar() {
 		
@@ -49,6 +54,7 @@ public class Libro extends Contenido implements Prestable{
 		
 	}
 
+	//toString
 	@Override
 	public String toString() {
 		String disponible;
